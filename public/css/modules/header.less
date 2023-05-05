@@ -1,0 +1,63 @@
+// main: ../app.less
+
+.back-header {
+    display: block; 
+    margin-bottom: 80px;
+}
+
+header {
+    .center(row);
+    padding: @large-gap 0;
+    width: 100%;
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 1000;
+    background-color: @secondary;
+
+    &.active {
+        box-shadow: 0 4px 10px -2px fade(gray, 40%);
+    }
+
+    .container {
+        .center(row);
+        justify-content: space-between;
+    }
+
+    a.active {
+        svg { fill: @blue; }
+
+        &:hover svg { fill: @blue; }
+    }
+
+    .box-icon-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: @large-gap;
+    }
+
+    .btn-icon {
+        width: 30px;
+        height: 30px; 
+        
+        &:hover svg {
+            fill: @primary;
+        }
+    }
+
+    .header-title {
+        text-transform: uppercase; 
+        overflow: hidden;
+        padding: 0 @basic-gap;
+    }
+
+    svg { 
+        transition-duration: 0.5s; 
+        fill: @gray; 
+    }
+
+    @media @breakpoint-mobile {
+        background-color: @secondary-mobile;
+    }
+}

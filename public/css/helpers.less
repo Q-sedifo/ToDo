@@ -1,0 +1,58 @@
+// main: app.less
+
+.spread() {
+    width: 100%;
+    height: 100%;
+    display: block; 
+}
+
+.preview() {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.center(@type: column) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: @type;
+}
+
+.scroll() {
+    &::-webkit-scrollbar {
+        width: 0px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: @gray;
+        border-radius: 3px;
+    }
+}
+
+.text-point(@color: @blue) {
+    &:before {
+        content: '';
+        width: .8rem;
+        height: .8rem;
+        position: absolute;
+        background-color: @blue;
+        right: -1rem; top: -.6rem;
+        border-radius: @circle;
+    }
+}
+
+.plus() {
+    &:before, &:after{
+        content: '';
+        width: 20px;
+        height: 1px;
+        background-color: @blue;
+        position: absolute;
+        border-radius: 2px;
+    }
+
+    &:after {
+        transform: rotate(90deg);
+    }
+}

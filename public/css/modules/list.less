@@ -1,0 +1,54 @@
+// main: ../app.less
+
+.list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: @large-gap 0;
+    gap: @large-gap;
+
+    @media @breakpoint-mobile {
+        .center(row);
+    }
+
+    a .list-item {
+        color: @primary;
+    }
+}
+
+.list-item {
+    width: 160px;
+    height: 100px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px @dark;
+    overflow: hidden;
+    position: relative;
+
+    &::first-letter { text-transform: uppercase; }
+
+    .center(column);
+
+    .count {
+        width: 24px;
+        height: 24px;
+        border-radius: @circle;
+        background-color: @grey;
+        position: absolute;
+        right: @middle-gap; top: @middle-gap;
+        font-size: @small-font;
+        color: @secondary;
+        .center(row);
+
+        @media @breakpoint-mobile {
+            color: @secondary-mobile;
+        }
+    }
+
+    &.add {
+        position: relative;
+        cursor: pointer;
+        .center(column);
+
+        .plus();
+    }
+}

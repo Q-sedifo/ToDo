@@ -1,0 +1,62 @@
+// compress: true;
+
+@import "vars.less";
+@import "helpers.less";
+@import "classes.less";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: @font, sans-serif;
+    font-size: @basic-font;
+    // font-weight: @bold-font;
+    background-color: @secondary;
+    color: @primary;
+    position: relative;
+
+    .scroll();
+
+    &::-webkit-scrollbar {
+        background-color: @secondary;
+    }
+
+    @media @breakpoint-mobile {
+        background-color: @secondary-mobile;
+    }
+}
+
+main {
+    position: relative;
+    // min-height: 100vh;
+}
+
+a { 
+    color: @grey; 
+
+    &.active { color: @blue; }
+}
+
+button, input, textarea { 
+    border: none;
+    resize: none; 
+    font-family: @font, sans-serif;
+    font-size: @basic-font;
+}
+
+// components
+@import "modules/header.less";
+@import "modules/task.less";
+@import "modules/list.less";
+@import "modules/widgets.less";
+@import "modules/accountForm.less";

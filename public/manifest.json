@@ -1,0 +1,17 @@
+{
+    "name": "ToDo",
+    "short_name": "ToDo",
+    "start_url": "/index.php",
+    "background_color": "#1b1b1b",
+    "description": "To do app",
+    "display": "standalone",
+    "theme_color": "#2564cf",
+    "icons": [
+        {
+            "src": "pwaIcon.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}

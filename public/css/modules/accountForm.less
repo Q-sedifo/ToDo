@@ -1,0 +1,89 @@
+// main: ../app.less
+
+.account-form {
+    .center(column);
+    gap: @large-gap;
+
+    // background-color: @grey;
+    padding: @large-gap;
+
+    .form-title {
+        font-size: @large-font;
+        font-weight: @bold-font;
+        letter-spacing: .1rem;
+        text-align: center;
+        position: relative;
+
+        &:before {
+            content: '';
+            width: .8rem;
+            height: .8rem;
+            position: absolute;
+            background-color: @blue;
+            right: -1rem; top: -.6rem;
+            border-radius: @circle;
+        }
+    }
+
+    .form-row {
+        .center(row);
+        gap: @basic-gap;
+    }
+
+    input {
+        width: 100%;
+        padding: @middle-gap @large-gap;;
+        color: @primary;
+        background: none;
+        border-radius: 20px;
+        border: 1px solid @gray;
+
+        &::placeholder {
+            color: @gray;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: @middle-gap @large-gap;
+        font-weight: @bold-font;
+        border-radius: 20px;
+    }
+}   
+
+.account-card {
+    border-radius: 20px;
+    padding: @large-gap;
+    box-shadow: 0 0 10px @dark;
+    max-width: 500px;
+    color: @grey;
+
+    .title {
+        color: @grey;
+    }
+
+    .account-ava {
+        border-radius: @circle;
+        background-color: @pink;
+        width: 30px; 
+        height: 30px;
+
+        img, svg {
+            .spread();
+        }
+    }
+
+    div {
+        .space-between;
+        padding: @basic-gap;
+    }
+
+    .box-icon { 
+        border-radius: 5px;
+        background-color: @blue; 
+    }
+
+    @media @breakpoint-mobile {
+        width: 100%;
+    }
+}

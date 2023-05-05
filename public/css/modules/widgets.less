@@ -1,0 +1,63 @@
+// main: ../app.less
+
+.widget {
+    background-color: @secondary;
+    padding: @large-gap;
+    border-radius: 20px;
+    width: 500px;
+    transition-duration: 0.5s;
+
+    input, textarea {
+        font-size: @basic-font;
+        font-weight: @bold-font;
+        background: none;
+        color: @primary;
+        width: 100%;
+        overflow: hidden;
+
+        &:focus { border-color: @blue !important; }
+
+        @media @breakpoint-mobile {
+            font-size: @large-font;
+        }
+    }
+
+    button {
+        padding: @middle-gap;
+        background: none;
+        color: @primary;
+        cursor: pointer;
+
+        &:not([disabled]) {
+            color: @blue;
+        }
+    }
+
+    .section {
+        padding: 0;
+
+        &.right {
+            display: flex;
+            justify-content: right;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: @middle-gap;
+    }
+
+    input.time {
+        border-radius: 20px;
+        border: 2px solid @gray;
+        padding: @middle-gap;
+
+        input { text-align: center; }
+    }
+
+    @media @breakpoint-mini-mobile {
+        width: 100%;
+    }
+}
