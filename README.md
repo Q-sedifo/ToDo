@@ -3,7 +3,7 @@ ___
 
 [-> Video review](https://www.youtube.com/watch?v=2vaDnV7NNvE&t=10s&ab_channel=DeProg)
 
-**Short description**
+**Short description**  
 To Do is a user-friendly and intuitive to-do list web app designed to help you stay organized and manage your tasks efficiently. With its sleek and modern interface, To Do makes it easy for you to keep track of your daily tasks and ensure nothing falls through the cracks.
 
 ### Features:
